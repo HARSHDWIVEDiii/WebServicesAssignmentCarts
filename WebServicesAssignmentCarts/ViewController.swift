@@ -78,8 +78,8 @@ extension ViewController : UICollectionViewDataSource{
         let cartsCollectionViewCell = self.cartsCollectionView.dequeueReusableCell(withReuseIdentifier: "CartsCollectionViewCell", for: indexPath) as! CartsCollectionViewCell
         cartsCollectionViewCell.userIdLabel.text = String(carts[indexPath.item].userId)
         for i in 0...carts[indexPath.item].products.count-1{
-            cartsCollectionViewCell.userIdLabel.text = carts[indexPath.item].products[i].productId.codingKey.stringValue
-            cartsCollectionViewCell.quantityLabel.text = carts[indexPath.item].products[i].productId.codingKey.stringValue
+            cartsCollectionViewCell.productIdLabel.text = carts[indexPath.item].products[i].productId.codingKey.stringValue
+            cartsCollectionViewCell.quantityLabel.text = carts[indexPath.item].products[i].quantity.codingKey.stringValue
         }
         return cartsCollectionViewCell
     }
